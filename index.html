@@ -1,92 +1,366 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Combattpragas - Dedetização em Campinas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combattpragas | Dedetização em Campinas e Região</title>
+  <meta name="description" content="Combattpragas - 26 anos de experiência em dedetização, desratização e controle de pragas em Campinas e região.">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-background: #f5f5f5;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #1a1a1a;
+      line-height: 1.5;
+    }
 
-header {
-background: #000;
-color: #FFD700;
-padding: 20px;
-text-align: center;
-}
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-section {
-padding: 30px;
-text-align: center;
-}
+    header {
+      background: #111111;
+      color: #ffffff;
+      padding: 18px 0;
+      border-bottom: 4px solid #f4c400;
+    }
 
-.botao {
-display: inline-block;
-background: #FFD700;
-color: #000;
-padding: 15px 25px;
-text-decoration: none;
-font-weight: bold;
-border-radius: 5px;
-margin-top: 20px;
-}
+    .topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
-.servicos {
-background: #fff;
-margin: 20px;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+    .logo h1 {
+      margin: 0;
+      color: #f4c400;
+      font-size: 32px;
+    }
 
-footer {
-background: #000;
-color: #fff;
-text-align: center;
-padding: 20px;
-}
-</style>
+    .logo p {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: #e5e5e5;
+    }
 
+    .top-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn-yellow {
+      background: #f4c400;
+      color: #111111;
+    }
+
+    .btn-yellow:hover {
+      background: #ddb000;
+    }
+
+    .btn-dark {
+      background: #2b2b2b;
+      color: #ffffff;
+    }
+
+    .btn-dark:hover {
+      background: #000000;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #111111, #2e2e2e);
+      color: #ffffff;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin: 0 0 16px;
+      color: #f4c400;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      font-size: 18px;
+      color: #f2f2f2;
+    }
+
+    .hero-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .hero-box {
+      background: rgba(255,255,255,0.08);
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin: 0 0 14px;
+      color: #111111;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      color: #555555;
+      font-size: 17px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      border-top: 4px solid #f4c400;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #111111;
+    }
+
+    .card p {
+      margin: 0;
+      color: #555555;
+    }
+
+    .highlight {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      padding: 28px;
+      margin-top: 24px;
+    }
+
+    .cities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .cities span {
+      background: #111111;
+      color: #f4c400;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .cta {
+      background: #111111;
+      color: #ffffff;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .cta h2 {
+      margin-top: 0;
+      color: #f4c400;
+      font-size: 34px;
+    }
+
+    .cta p {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      color: #f2f2f2;
+      font-size: 17px;
+    }
+
+    footer {
+      background: #000000;
+      color: #ffffff;
+      text-align: center;
+      padding: 22px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-<h1>COMBATTPRAGAS</h1>
-<p>26 anos protegendo sua casa e empresa</p>
-</header>
+  <header>
+    <div class="container topo">
+      <div class="logo">
+        <h1>COMBATTPRAGAS</h1>
+        <p>26 anos protegendo sua casa e sua empresa</p>
+      </div>
 
-<section>
-<h2>Dedetização Profissional em Campinas e Região</h2>
-<p>Atendemos Campinas, Sumaré, Hortolândia, Paulínia e região.</p>
+      <div class="top-buttons">
+        <a class="btn btn-yellow" href="tel:5519974207611">Ligar Agora</a>
+        <a class="btn btn-dark" href="https://wa.me/5519974207611" target="_blank">Pedir Orçamento</a>
+      </div>
+    </div>
+  </header>
 
-<a class="botao" href="tel:5519974207611">Ligar Agora</a>
-</section>
+  <section class="hero">
+    <div class="container">
+      <h2>Dedetização Profissional em Campinas e Região</h2>
+      <p>
+        Atendimento rápido para residências, condomínios, comércios e empresas.
+        Controle de baratas, ratos, escorpiões, cupins, formigas e outras pragas urbanas com 26 anos de experiência.
+      </p>
 
-<section class="servicos">
-<h3>Nossos Serviços</h3>
-<p>✔ Controle de baratas</p>
-<p>✔ Controle de escorpiões</p>
-<p>✔ Controle de ratos</p>
-<p>✔ Cupins e formigas</p>
-<p>✔ Dedetização residencial e comercial</p>
-</section>
+      <div class="top-buttons" style="justify-content:center;">
+        <a class="btn btn-yellow" href="tel:5519974207611">Ligar Agora</a>
+        <a class="btn btn-dark" href="https://wa.me/5519974207611" target="_blank">Solicitar Orçamento</a>
+      </div>
 
-<section>
-<h3>Por que escolher a Combattpragas?</h3>
-<p>✔ 26 anos de experiência</p>
-<p>✔ Atendimento rápido</p>
-<p>✔ Produtos profissionais</p>
-<p>✔ Garantia no serviço</p>
-</section>
+      <div class="hero-boxes">
+        <div class="hero-box"><strong>Atendimento rápido</strong><br>Campinas e região</div>
+        <div class="hero-box"><strong>26 anos no mercado</strong><br>Experiência e confiança</div>
+        <div class="hero-box"><strong>Residencial e comercial</strong><br>Soluções para cada necessidade</div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-<p>Combattpragas © Todos os direitos reservados</p>
-</footer>
+  <section>
+    <div class="container">
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-subtitle">
+        Soluções profissionais para controle de pragas urbanas, com foco em segurança, agilidade e atendimento de qualidade.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Dedetização</h3>
+          <p>Controle profissional de pragas em residências, empresas, comércios e condomínios.</p>
+        </div>
+
+        <div class="card">
+          <h3>Desratização</h3>
+          <p>Controle de ratos com medidas corretivas e preventivas para reduzir riscos no local.</p>
+        </div>
+
+        <div class="card">
+          <h3>Controle de Escorpiões</h3>
+          <p>Atendimento focado na redução de risco e orientação para proteção do ambiente.</p>
+        </div>
+
+        <div class="card">
+          <h3>Controle de Baratas</h3>
+          <p>Soluções para focos aparentes e escondidos, com atenção às áreas mais críticas.</p>
+        </div>
+
+        <div class="card">
+          <h3>Controle de Cupins</h3>
+          <p>Avaliação e tratamento para proteger estruturas e evitar maiores prejuízos.</p>
+        </div>
+
+        <div class="card">
+          <h3>Controle de Formigas</h3>
+          <p>Tratamento para reduzir infestação e melhorar o controle em ambientes internos e externos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#ffffff;">
+    <div class="container">
+      <h2 class="section-title">Por que escolher a Combattpragas?</h2>
+      <p class="section-subtitle">
+        Trabalhamos com atendimento profissional, experiência no setor e foco em resolver o problema com rapidez.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>26 anos de experiência</h3>
+          <p>Tradição e conhecimento no combate a pragas urbanas.</p>
+        </div>
+
+        <div class="card">
+          <h3>Atendimento rápido</h3>
+          <p>Agilidade para atender Campinas e cidades da região.</p>
+        </div>
+
+        <div class="card">
+          <h3>Serviço profissional</h3>
+          <p>Mais segurança, orientação e atenção em cada atendimento.</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <h3 style="margin-top:0;">Atendemos Campinas e Região</h3>
+        <p>Atendimento sujeito à disponibilidade, com foco principal em:</p>
+        <div class="cities">
+          <span>Campinas</span>
+          <span>Sumaré</span>
+          <span>Hortolândia</span>
+          <span>Paulínia</span>
+          <span>Indaiatuba</span>
+          <span>Valinhos</span>
+          <span>Vinhedo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Precisa de atendimento?</h2>
+      <p>
+        Fale agora com a Combattpragas e solicite seu orçamento.
+        Atendimento rápido para quem precisa resolver o problema com mais segurança e confiança.
+      </p>
+      <div class="top-buttons" style="justify-content:center;">
+        <a class="btn btn-yellow" href="tel:5519974207611">Ligar Agora</a>
+        <a class="btn btn-dark" href="https://wa.me/5519974207611" target="_blank">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Combattpragas © Todos os direitos reservados
+  </footer>
 
 </body>
 </html>
