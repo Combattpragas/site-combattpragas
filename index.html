@@ -11,10 +11,29 @@ gtag('js', new Date());
 gtag('config', 'AW-18097101424');
 </script>
 
+    <!-- Event snippet for Clique WhatsApp - Orçamento conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18097101424/SRxaCICs9OQcEPC0r7VD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
   <meta charset="UTF-8" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Combattpragas | Dedetização em Campinas e Região</title>
+  <title>Combattpragas | Dedetização+fwa.me
+    gem Campinas e Região</title>
   <meta name="description" content="Dedetização profissional em Campinas e região. Combattpragas com 26 anos de experiência no controle de baratas, ratos, escorpiões, cupins e outras pragas urbanas." />
   <style>
 img {
@@ -343,7 +362,7 @@ img:hover {
         </p>
         <div class="botoes">
           <a class="btn btn-amarelo" href="tel:5519974207611">Ligar Agora</a>
-          <a class="btn btn-escuro" href="https://wa.me/5519974207611"> target="_blank">Pedir orçamento agora no WhatsApp </a>
+          <a class="btn btn-escuro"onclick="gtag_report_conversion(this.href); return false;"  href="https://wa.me/5519974207611"> target="_blank">Pedir orçamento agora no WhatsApp </a>
         </div>
       </div>
 
